@@ -1,0 +1,532 @@
+/* ===================================================
+   DANISH MUHAMMAD ZEIN PORTFOLIO
+   Global Style
+===================================================*/
+
+/* GOOGLE FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#050505;
+    color:#ffffff;
+
+    font-family:'Poppins',sans-serif;
+
+    overflow-x:hidden;
+
+}
+
+/* =======================================
+VARIABLE
+======================================= */
+
+:root{
+
+    --bg:#050505;
+
+    --bg2:#0d0d0d;
+
+    --card:#121212;
+
+    --white:#ffffff;
+
+    --text:#a9a9a9;
+
+    --orange:#ff6b35;
+
+    --orange2:#ff914d;
+
+    --border:#222;
+
+    --transition:.4s;
+
+}
+
+/* =======================================
+SELECTION
+======================================= */
+
+::selection{
+
+    background:var(--orange);
+
+    color:#fff;
+
+}
+
+/* =======================================
+SCROLLBAR
+======================================= */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#080808;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+
+        var(--orange),
+
+        #ff8146
+
+    );
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#ff8c52;
+
+}
+
+/* =======================================
+LINK
+======================================= */
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+/* =======================================
+IMAGE
+======================================= */
+
+img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+/* =======================================
+LIST
+======================================= */
+
+ul{
+
+    list-style:none;
+
+}
+
+/* =======================================
+SECTION
+======================================= */
+
+section{
+
+    position:relative;
+
+    width:100%;
+
+    padding:120px 10%;
+
+}
+
+/* =======================================
+TITLE
+======================================= */
+
+.section-title{
+
+    font-size:48px;
+
+    font-weight:700;
+
+    margin-bottom:70px;
+
+    position:relative;
+
+    display:inline-block;
+
+}
+
+.section-title::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-15px;
+
+    width:70px;
+
+    height:4px;
+
+    background:var(--orange);
+
+    border-radius:50px;
+
+}
+
+/* =======================================
+BUTTON
+======================================= */
+
+.btn-primary{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:16px 34px;
+
+    background:var(--orange);
+
+    border-radius:50px;
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.4s;
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+    0 0 20px rgba(255,107,53,.4),
+
+    0 0 60px rgba(255,107,53,.2);
+
+}
+
+.btn-secondary{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    border:1px solid #fff;
+
+    transition:.4s;
+
+}
+
+.btn-secondary:hover{
+
+    background:#fff;
+
+    color:#000;
+
+}
+
+/* =======================================
+CONTAINER
+======================================= */
+
+.container{
+
+    width:100%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+/* =======================================
+CARD
+======================================= */
+
+.card{
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:24px;
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:rgba(255,107,53,.6);
+
+    box-shadow:
+
+    0 0 35px rgba(255,107,53,.15);
+
+}
+
+/* =======================================
+GLOW
+======================================= */
+
+.glow{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(180px);
+
+    z-index:-1;
+
+}
+
+.glow-left{
+
+    width:420px;
+
+    height:420px;
+
+    background:#ff6b35;
+
+    left:-150px;
+
+    top:180px;
+
+    opacity:.35;
+
+}
+
+.glow-right{
+
+    width:500px;
+
+    height:500px;
+
+    background:#ff6b35;
+
+    right:-200px;
+
+    top:50px;
+
+    opacity:.25;
+
+}
+
+/* =======================================
+GRID BACKGROUND
+======================================= */
+
+.grid-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    linear-gradient(
+
+        rgba(255,255,255,.03) 1px,
+
+        transparent 1px
+
+    ),
+
+    linear-gradient(
+
+        90deg,
+
+        rgba(255,255,255,.03) 1px,
+
+        transparent 1px
+
+    );
+
+    background-size:60px 60px;
+
+    mask-image:
+
+    radial-gradient(
+
+        circle,
+
+        white,
+
+        transparent
+
+    );
+
+    z-index:-2;
+
+}
+
+/* =======================================
+TEXT
+======================================= */
+
+p{
+
+    color:var(--text);
+
+    line-height:1.8;
+
+}
+
+/* =======================================
+FOOTER
+======================================= */
+
+footer{
+
+    padding:60px 10%;
+
+    text-align:center;
+
+    border-top:1px solid #1d1d1d;
+
+}
+
+footer h2{
+
+    font-size:32px;
+
+    margin-bottom:10px;
+
+}
+
+footer p{
+
+    color:#8b8b8b;
+
+}
+
+.footer-tagline{
+
+    max-width:520px;
+
+    margin:0 auto 30px;
+
+    color:#8b8b8b;
+
+    font-size:14px;
+
+}
+
+.footer-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:28px;
+
+    margin-bottom:24px;
+
+}
+
+.footer-links a{
+
+    color:#b8b8b8;
+
+    font-size:14px;
+
+    transition:var(--transition);
+
+}
+
+.footer-links a:hover{
+
+    color:var(--orange);
+
+}
+
+.footer-socials{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:22px;
+
+    margin-bottom:30px;
+
+}
+
+.footer-socials a{
+
+    color:#8b8b8b;
+
+    font-size:14px;
+
+    transition:var(--transition);
+
+}
+
+.footer-socials a:hover{
+
+    color:var(--orange);
+
+}
+
+/* =======================================
+ANIMATION
+======================================= */
+
+.fade-up{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:.8s;
+
+}
+
+.fade-up.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}

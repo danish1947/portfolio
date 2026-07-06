@@ -1,0 +1,150 @@
+/* ======================================================
+   CUSTOM CURSOR
+   Danish Muhammad Zein Portfolio
+====================================================== */
+
+/* Sembunyikan cursor bawaan */
+
+body{
+
+    cursor:none;
+
+}
+
+/* ===========================
+   CURSOR
+=========================== */
+
+.cursor{
+
+    position:fixed;
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+    pointer-events:none;
+
+    transform:translate(-50%,-50%);
+
+    z-index:999999;
+
+    transition:
+
+    width .25s ease,
+
+    height .25s ease,
+
+    transform .08s linear,
+
+    background .3s ease,
+
+    opacity .3s ease;
+
+}
+
+/* ===========================
+   GLOW
+=========================== */
+
+.cursor-blur{
+
+    position:fixed;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(255,107,53,.18);
+
+    filter:blur(80px);
+
+    pointer-events:none;
+
+    transform:translate(-50%,-50%);
+
+    z-index:999998;
+
+    transition:
+
+    transform .12s linear,
+
+    opacity .3s;
+
+}
+
+/* ===========================
+   Hover Effect
+=========================== */
+
+.cursor.hover{
+
+    width:55px;
+
+    height:55px;
+
+    background:transparent;
+
+    border:2px solid var(--orange);
+
+}
+
+.cursor-blur.hover{
+
+    width:320px;
+
+    height:320px;
+
+    background:rgba(255,107,53,.30);
+
+}
+
+/* ===========================
+   Click Effect
+=========================== */
+
+.cursor.click{
+
+    transform:translate(-50%,-50%) scale(.7);
+
+}
+
+/* ===========================
+   Hide when leave page
+=========================== */
+
+.cursor.hide,
+
+.cursor-blur.hide{
+
+    opacity:0;
+
+}
+
+/* ===========================
+   Disable Mobile
+=========================== */
+
+@media(max-width:768px){
+
+body{
+
+    cursor:auto;
+
+}
+
+.cursor,
+
+.cursor-blur{
+
+    display:none;
+
+}
+
+}

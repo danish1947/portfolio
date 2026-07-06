@@ -1,0 +1,462 @@
+/* =====================================================
+   RESPONSIVE CSS
+   Danish Muhammad Zein Portfolio
+=====================================================*/
+
+/* ===========================================
+   1400px
+=========================================== */
+
+@media(max-width:1400px){
+
+section{
+
+padding:100px 7%;
+
+}
+
+.hero h1{
+
+font-size:68px;
+
+}
+
+.photo-frame{
+
+width:400px;
+height:500px;
+
+}
+
+}
+
+/* ===========================================
+   1200px
+=========================================== */
+
+@media(max-width:1200px){
+
+.hero{
+
+gap:60px;
+
+}
+
+.hero h1{
+
+font-size:60px;
+
+}
+
+.photo-frame{
+
+width:360px;
+height:460px;
+
+}
+
+.section-title{
+
+font-size:42px;
+
+}
+
+}
+
+/* ===========================================
+   992px
+=========================================== */
+
+@media(max-width:992px){
+
+.hero{
+
+flex-direction:column-reverse;
+
+text-align:center;
+
+padding-top:160px;
+
+gap:60px;
+
+}
+
+.hero-left{
+
+max-width:100%;
+
+}
+
+.hero p{
+
+margin:auto;
+margin-bottom:35px;
+
+}
+
+.hero-button{
+
+justify-content:center;
+
+}
+
+.social{
+
+justify-content:center;
+
+}
+
+.photo-frame{
+
+width:330px;
+height:430px;
+
+}
+
+.scroll-down{
+
+display:none;
+
+}
+
+}
+
+/* ===========================================
+   768px
+=========================================== */
+
+@media(max-width:768px){
+
+header{
+
+padding:20px 25px;
+
+}
+
+section{
+
+padding:90px 25px;
+
+}
+
+.hero{
+
+min-height:auto;
+
+}
+
+.hero h1{
+
+font-size:46px;
+
+line-height:1.15;
+
+}
+
+.hero p{
+
+font-size:15px;
+
+}
+
+.hero-button{
+
+flex-direction:column;
+
+width:100%;
+
+}
+
+.btn-primary,
+
+.btn-secondary{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+.photo-frame{
+
+width:280px;
+height:360px;
+
+}
+
+.social{
+
+gap:18px;
+
+font-size:14px;
+
+}
+
+.section-title{
+
+font-size:36px;
+
+}
+
+.loader-logo{
+
+font-size:60px;
+
+}
+
+.loader-bar{
+
+width:220px;
+
+}
+
+}
+
+/* ===========================================
+   600px
+=========================================== */
+
+@media(max-width:600px){
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+#typing-text{
+
+font-size:22px;
+
+}
+
+.hero-tag{
+
+font-size:.75rem;
+
+}
+
+.photo-frame{
+
+width:250px;
+height:320px;
+
+}
+
+.logo{
+
+font-size:22px;
+
+}
+
+footer h2{
+
+font-size:26px;
+
+}
+
+}
+
+/* ===========================================
+   480px
+=========================================== */
+
+@media(max-width:480px){
+
+section{
+
+padding:80px 20px;
+
+}
+
+.hero{
+
+gap:40px;
+
+}
+
+.hero h1{
+
+font-size:34px;
+
+}
+
+.hero p{
+
+font-size:14px;
+
+line-height:1.7;
+
+}
+
+.photo-frame{
+
+width:220px;
+height:290px;
+
+}
+
+.loader-logo{
+
+font-size:52px;
+
+}
+
+.loader-content p{
+
+font-size:12px;
+
+}
+
+.download-btn{
+
+display:none;
+
+}
+
+}
+
+/* ===========================================
+   390px
+=========================================== */
+
+@media(max-width:390px){
+
+.hero h1{
+
+font-size:30px;
+
+}
+
+.photo-frame{
+
+width:200px;
+height:260px;
+
+}
+
+.btn-primary,
+
+.btn-secondary{
+
+padding:15px;
+
+font-size:14px;
+
+}
+
+.section-title{
+
+font-size:30px;
+
+}
+
+.social{
+
+flex-direction:column;
+
+gap:10px;
+
+}
+
+}
+
+/* ===========================================
+   LANDSCAPE PHONE
+=========================================== */
+
+@media(max-height:500px){
+
+.hero{
+
+padding-top:140px;
+
+padding-bottom:100px;
+
+}
+
+.photo-frame{
+
+width:230px;
+height:300px;
+
+}
+
+}
+
+/* ===========================================
+   LARGE SCREEN
+=========================================== */
+
+@media(min-width:1700px){
+
+.hero{
+
+max-width:1600px;
+
+margin:auto;
+
+}
+
+section{
+
+max-width:1700px;
+
+margin:auto;
+
+}
+
+}
+
+/* ===========================================
+   NEW SECTIONS: ABOUT / BRANDS / PROJECTS /
+   SKILLS / CONTACT — RESPONSIVE
+=========================================== */
+
+@media(max-width:992px){
+
+.about-grid{
+grid-template-columns:1fr;
+}
+
+.brands-grid{
+grid-template-columns:1fr;
+}
+
+.projects-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.skills-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:600px){
+
+.projects-grid{
+grid-template-columns:1fr;
+}
+
+.skills-grid{
+grid-template-columns:1fr;
+}
+
+.about-info{
+padding:28px;
+}
+
+.contact-form{
+padding:28px;
+}
+
+.brand-card{
+padding:28px;
+}
+
+}

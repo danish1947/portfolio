@@ -1,0 +1,123 @@
+/* =====================================================
+   ABOUT.CSS
+   Danish Muhammad Zein Portfolio
+=====================================================*/
+
+#about {
+    background: var(--bg2);
+}
+
+.about-tag,
+.section-tag {
+    display: inline-block;
+    color: var(--orange);
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+#about .section-title {
+    display: block;
+}
+
+/* =====================================
+GRID LAYOUT
+===================================== */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* =====================================
+TEXT
+===================================== */
+
+.about-text p {
+    font-size: 17px;
+    margin-bottom: 22px;
+}
+
+.about-roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.about-roles li {
+    padding: 10px 22px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, .1);
+    background: rgba(255, 255, 255, .03);
+    color: #fff;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.about-roles li:hover {
+    border-color: rgba(255, 107, 53, .6);
+    color: var(--orange);
+}
+
+/* =====================================
+INFO CARD
+===================================== */
+
+.about-info {
+    background: var(--card);
+    border: 1px solid rgba(255, 255, 255, .06);
+    border-radius: 24px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.info-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, .06);
+}
+
+.info-row:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.info-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #777;
+}
+
+.info-value {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-value .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #00ff84;
+    box-shadow: 0 0 12px #00ff84;
+    flex-shrink: 0;
+}
+
+.about-cta {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}

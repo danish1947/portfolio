@@ -1,0 +1,349 @@
+/* =====================================================
+   ANIMATION.CSS
+   Danish Muhammad Zein Portfolio
+=====================================================*/
+
+/* ===========================================
+   TRANSITION DEFAULT
+=========================================== */
+
+*{
+    transition:
+        background .35s ease,
+        color .35s ease,
+        border .35s ease,
+        transform .35s ease,
+        opacity .35s ease;
+}
+
+/* ===========================================
+   FADE UP
+=========================================== */
+
+.fade-up{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+}
+
+.fade-up.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ===========================================
+   FADE LEFT
+=========================================== */
+
+.fade-left{
+
+    opacity:0;
+
+    transform:translateX(-70px);
+
+}
+
+.fade-left.show{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+/* ===========================================
+   FADE RIGHT
+=========================================== */
+
+.fade-right{
+
+    opacity:0;
+
+    transform:translateX(70px);
+
+}
+
+.fade-right.show{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+/* ===========================================
+   ZOOM
+=========================================== */
+
+.zoom{
+
+    opacity:0;
+
+    transform:scale(.8);
+
+}
+
+.zoom.show{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+/* ===========================================
+   FLOAT
+=========================================== */
+
+.float{
+
+    animation:floating 5s ease-in-out infinite;
+
+}
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================================
+   GLOW PULSE
+=========================================== */
+
+.glow-pulse{
+
+    animation:glowPulse 2.5s infinite;
+
+}
+
+@keyframes glowPulse{
+
+    0%{
+
+        box-shadow:0 0 10px rgba(255,107,53,.25);
+
+    }
+
+    50%{
+
+        box-shadow:
+
+        0 0 40px rgba(255,107,53,.6);
+
+    }
+
+    100%{
+
+        box-shadow:
+
+        0 0 10px rgba(255,107,53,.25);
+
+    }
+
+}
+
+/* ===========================================
+   BUTTON HOVER
+=========================================== */
+
+.btn-primary{
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.btn-primary::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-120%;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.35),
+
+        transparent
+
+    );
+
+}
+
+.btn-primary:hover::before{
+
+    left:120%;
+
+    transition:.8s;
+
+}
+
+/* ===========================================
+   CARD HOVER
+=========================================== */
+
+.card{
+
+    transform-style:preserve-3d;
+
+}
+
+.card:hover{
+
+    transform:
+
+        perspective(1000px)
+
+        rotateX(4deg)
+
+        rotateY(-4deg)
+
+        translateY(-12px);
+
+}
+
+/* ===========================================
+   IMAGE ZOOM
+=========================================== */
+
+.image-hover{
+
+    overflow:hidden;
+
+}
+
+.image-hover img{
+
+    transition:.6s;
+
+}
+
+.image-hover:hover img{
+
+    transform:scale(1.12);
+
+}
+
+/* ===========================================
+   TEXT REVEAL
+=========================================== */
+
+.reveal{
+
+    overflow:hidden;
+
+}
+
+.reveal span{
+
+    display:block;
+
+    transform:translateY(100%);
+
+    animation:revealText .8s forwards;
+
+}
+
+@keyframes revealText{
+
+    to{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================================
+   SCROLL INDICATOR
+=========================================== */
+
+.scroll-down{
+
+    animation:scrollMove 2s infinite;
+
+}
+
+@keyframes scrollMove{
+
+    0%{
+
+        transform:translate(-50%,0);
+
+    }
+
+    50%{
+
+        transform:translate(-50%,12px);
+
+    }
+
+    100%{
+
+        transform:translate(-50%,0);
+
+    }
+
+}
+
+/* ===========================================
+   ROTATE GLOW
+=========================================== */
+
+.rotate-glow{
+
+    animation:rotateGlow 14s linear infinite;
+
+}
+
+@keyframes rotateGlow{
+
+    from{
+
+        transform:rotate(0);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}

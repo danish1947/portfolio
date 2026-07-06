@@ -1,0 +1,305 @@
+/* ===========================================
+   NAVBAR
+=========================================== */
+
+header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    padding:22px 8%;
+
+    z-index:9999;
+
+    transition:.45s ease;
+
+}
+
+/* Class ini akan ditambahkan lewat JavaScript */
+header.active{
+
+    background:rgba(10,10,10,.75);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+/* ===========================================
+   NAVBAR
+=========================================== */
+
+nav{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+/* ===========================================
+   LOGO
+=========================================== */
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+.logo:hover{
+
+    color:var(--orange);
+
+}
+
+/* ===========================================
+   MENU
+=========================================== */
+
+nav ul{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:40px;
+
+}
+
+nav ul li{
+
+    position:relative;
+
+}
+
+nav ul li a{
+
+    color:#b8b8b8;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    transition:.35s;
+
+}
+
+/* Hover */
+
+nav ul li a:hover{
+
+    color:#fff;
+
+}
+
+/* Underline Animation */
+
+nav ul li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--orange);
+
+    transition:.4s;
+
+    border-radius:20px;
+
+}
+
+nav ul li a:hover::after{
+
+    width:100%;
+
+}
+
+/* ===========================================
+   DOWNLOAD BUTTON
+=========================================== */
+
+.download-btn{
+
+    padding:13px 28px;
+
+    border-radius:50px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    color:#fff;
+
+    transition:.4s;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    backdrop-filter:blur(12px);
+
+}
+
+.download-btn:hover{
+
+    background:var(--orange);
+
+    border-color:var(--orange);
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+        0 0 25px rgba(255,107,53,.35);
+
+}
+
+/* ===========================================
+   HAMBURGER
+=========================================== */
+
+.menu-toggle{
+
+    display:none;
+
+    flex-direction:column;
+
+    cursor:pointer;
+
+    gap:6px;
+
+}
+
+.menu-toggle span{
+
+    width:28px;
+
+    height:3px;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    transition:.4s;
+
+}
+
+/* Animasi ketika aktif */
+
+.menu-toggle.active span:nth-child(1){
+
+    transform:rotate(45deg) translateY(12px);
+
+}
+
+.menu-toggle.active span:nth-child(2){
+
+    opacity:0;
+
+}
+
+.menu-toggle.active span:nth-child(3){
+
+    transform:rotate(-45deg) translateY(-12px);
+
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media(max-width:900px){
+
+    nav ul{
+
+        position:fixed;
+
+        top:0;
+
+        right:-100%;
+
+        width:280px;
+
+        height:100vh;
+
+        background:#090909;
+
+        display:flex;
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        align-items:center;
+
+        gap:45px;
+
+        transition:.5s;
+
+        border-left:1px solid rgba(255,255,255,.06);
+
+    }
+
+    nav ul.active{
+
+        right:0;
+
+    }
+
+    .download-btn{
+
+        display:none;
+
+    }
+
+    .menu-toggle{
+
+        display:flex;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    header{
+
+        padding:20px 6%;
+
+    }
+
+    .logo{
+
+        font-size:22px;
+
+    }
+
+}
